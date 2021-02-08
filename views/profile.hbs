@@ -1,0 +1,21 @@
+<main class="main">
+  <form class="form-user" action="/usuario/modificar" method="POST">
+    <label for="user">Email:</label>
+    <input type="text" name="usuario" id="user" value="{{session.usuario}}" readonly>
+    <label for="password">Contraseña:</label>
+    <input type="text" name="password" id="password" value="{{session.password}}">
+    {{#if err.errors.password}}
+    <p class="message-error">{{err.errors.password}}</p>
+    {{/if}}
+    {{#if messagedelete}}
+    <p class="message-ok">El usuario ha sido eliminado con éxito.</p>
+    {{/if}}
+    {{#if messagemodify}}
+    <p class="message-ok">La contraseña ha sido modificada con éxito.</p>
+    {{/if}}
+    <div class="form-buttons">
+      <input type="submit" value="Modificar">
+      <p class="delete"><a class="delete-link" href="/usuario/eliminar">Eliminar</a></p>
+    </div>
+  </form>
+</main>

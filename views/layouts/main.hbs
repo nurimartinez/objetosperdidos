@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/icon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/908b05fde3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/base.css">
+  <title>{{ title }}</title>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="header-logo"><img src="/img/logo.png" alt="Logotipo Lost&Found"></a>
+    {{#if session.autenticado}}
+    <div class="header-buttons">
+      <a href="/usuario/perfil" class="header-button-user"><i class="fas fa-user-alt"></i></a>
+      <p><a href="/registro" class="header-button-login">Crear objeto</a></p>
+      <p><a href="/usuario/cerrarsesion" class="header-button-newuser">Cerrar Sesión</a></p>
+    </div>
+    {{else}}
+    <div class="header-buttons">
+      <p><a href="/usuario/login" class="header-button-login">Login</a></p>
+      <p><a href="/usuario/nuevousuario" class="header-button-newuser">Registro</a></p>
+    </div>
+    {{/if}}
+  </header>
+
+  {{{ body }}}
+
+  <footer>
+    <p><a href="https://github.com/nurimartinez" target="_blank" alt="GitHub Nuria Martínez">@nurimartinez</a></p>
+  </footer>
+  {{#if script}}
+  <script src="/js/script.js"></script>
+  {{/if}}
+</body>
+
+</html>

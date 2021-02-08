@@ -1,0 +1,40 @@
+<h1>Esto es el registro</h1>
+<main class="main-item">
+  <form class="form-item" action="/registro/guardar" method="POST" enctype="multipart/form-data">
+    <label for="name">Nombre:</label>
+    <input type="text" name="nombre" id="name" value="{{body.nombre}}">
+    {{#if err.nombre}}
+    <p class="message-error">{{err.nombre}}</p>
+    {{/if}}
+    <label for="phone">Teléfono:</label>
+    <input type="text" name="telefono" id="phone" value="{{body.telefono}}">
+    {{#if err.telefono}}
+    <p class="message-error">{{err.telefono}}</p>
+    {{/if}}
+    <label for="title">Título:</label>
+    <input type="text" id="titulo" name="titulo" value="{{body.titulo}}">
+    {{#if err.titulo}}
+    <p class="message-error">{{err.titulo}}</p>
+    {{/if}}
+    <label for="description">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion" value="{{body.descripcion}}">
+    {{#if err.descripcion}}
+    <p class="message-error">{{err.descripcion}}</p>
+    {{/if}}
+    <label for="location">Localización:</label>
+    <input type="text" id="localizacion" name="localizacion" value="{{body.localizacion}}">
+    {{#if err.localizacion}}
+    <p class="message-error">{{err.localizacion}}</p>
+    {{/if}}
+    <label for="date">Fecha de localización:</label>
+    <input type="date" id="fecha" name="fecha" value="{{body.fecha}}">
+    <input type="file" name="foto" id="foto" value="{{body.fecha}}">
+    <div class="form-buttons">
+      <input type="button" id="buttonHome" value="Listado">
+      <input type="submit" value="Registrar">
+    </div>
+    {{#if message}}
+    <div class="message-item">Objeto registrado con éxito</div>
+    {{/if}}
+  </form>
+</main>

@@ -1,0 +1,33 @@
+
+$blue: #71c6b9;
+$green: #003C47;
+$white: #fff;
+$gray: #F0F0F0;
+$yellow: #FFBE3D;
+$red: #FF5C5C;
+$darkGray: #232323;
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url("../img/bg.png");
+  background-attachment: fixed;
+  background-size: 2%;
+  background-repeat: repeat;
+}
+
+@import "confirm";
+@import "list";
+@import "register";
+@import "user";
+@import "header";
+@import "footer";
