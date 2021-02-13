@@ -8,7 +8,7 @@ Aplicación para la publicación de objetos perdidos. Tiene un formulario de reg
 
 
 <p align="center">
-  <img src="public/img/readme.png" width="700">
+  <img src="public/img/readmedbl.png" width="700">
 </p>
 
 Características
